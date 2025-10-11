@@ -1,0 +1,17 @@
+# Ignore virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Ignore system or editor junk
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+Thumbs.db
+
+# Optional: VSCode or IDE config (remove these lines if you want to track them)
+.vscode/
+.idea/

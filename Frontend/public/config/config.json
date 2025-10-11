@@ -1,0 +1,25 @@
+{
+  "apiBase": "http://localhost:8002",
+  "endpoints": {
+    "threat.emailProtection": "/email-classify",
+    "threat.intrusionDetection": "/ids-predict",
+    "threat.discordDetection": "/threat/discord",
+    "threat.telegramAnalysis": "/threat/telegram",
+    "threat.darkWebMonitoring": "/threat/darkweb",
+    "threat.socialMediaAnalysis": "/threat/social",
+    "threat.malwareIocCorrelation": "/threat/ioc-correlation",
+
+    "video.faceRecognition": "/surveillance/face/recognize",
+    "video.anomalyDetection": "/video/anomaly",
+    "video.weaponDetection": "/video/weapon",
+    "video.crowdAnalysis": "/video/crowd",
+    "video.suspiciousActivity": "/video/suspicious",
+    "video.perimeterBreach": "/video/perimeter-breach",
+
+    "border.droneDetection": "/border/drone",
+    "border.suspiciousActivity": "/border/suspicious",
+    "border.vehicleAnpr": "/border/vehicle-anpr",
+    "border.nightThermalPerson": "/border/night-thermal",
+    "border.smugglingRoutes": "/border/smuggling"
+  }
+}
