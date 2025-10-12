@@ -8,16 +8,14 @@
     "threat.darkWebMonitoring": "/threat/darkweb",
     "threat.socialMediaAnalysis": "/threat/social",
     "threat.malwareIocCorrelation": "/threat/ioc-correlation",
-
     "video.faceRecognition": "/surveillance/face/recognize",
-    "video.anomalyDetection": "/video/anomaly",
-    "video.weaponDetection": "/video/weapon",
+    "video.anomalyDetection": "/surveillance/anomaly/detect",
+    "video.weaponDetection": "/surveillance/weapon/detect",
     "video.crowdAnalysis": "/video/crowd",
     "video.suspiciousActivity": "/video/suspicious",
     "video.perimeterBreach": "/video/perimeter-breach",
-
-    "border.droneDetection": "/border/drone",
-    "border.suspiciousActivity": "/border/suspicious",
+    "border.droneDetection": "/border/drones/detect",
+    "border.suspiciousActivity": "/border/suspicious/detect",
     "border.vehicleAnpr": "/border/vehicle-anpr",
     "border.nightThermalPerson": "/border/night-thermal",
     "border.smugglingRoutes": "/border/smuggling"

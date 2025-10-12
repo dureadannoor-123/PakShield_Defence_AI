@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 import uvicorn
 import numpy as np
+import cv2
 
 # Import our custom modules
 from Backend.AIThreatIntelligence.email_classify import email_extract
@@ -43,6 +44,7 @@ HUMAN_UPLOAD_DIR = BORDER_ANOMALY_DIR / "HUMAN_DETECTION" / "uploads"
 HUMAN_LOG_DIR = BORDER_ANOMALY_DIR / "HUMAN_DETECTION" / "logs"
 SUSPICIOUS_UPLOAD_DIR = BORDER_ANOMALY_DIR / "Suspicious_Activity_Detection_master" / "uploads"
 SUSPICIOUS_OUTPUT_DIR = BORDER_ANOMALY_DIR / "Suspicious_Activity_Detection_master" / "output video"
+SUSPICIOUS_LOG_DIR = BORDER_ANOMALY_DIR / "Suspicious_Activity_Detection_master" / "logs"
 
 SURVEILLANCE_DIR = BASE_DIR / "Backend" / "Survilleance"
 SURV_UPLOAD_DIR = SURVEILLANCE_DIR / "uploads"
@@ -66,6 +68,7 @@ for directory in (
     HUMAN_LOG_DIR,
     SUSPICIOUS_UPLOAD_DIR,
     SUSPICIOUS_OUTPUT_DIR,
+    SUSPICIOUS_LOG_DIR,
     SURV_UPLOAD_DIR,
     SURV_OUTPUT_DIR,
     SURV_LOG_DIR,
@@ -159,6 +162,26 @@ def _is_image(name: str, content_type: str | None = None) -> bool:
         or lowered.endswith((".jpg", ".jpeg", ".png", ".bmp", ".webp"))
     )
 
+
+def _create_side_by_side_image(original_path: Path, annotated_path: Path, output_path: Path) -> Path | None:
+    """Persist a side-by-side composite of original and annotated frames."""
+
+    try:
+        original = cv2.imread(str(original_path))
+        annotated = cv2.imread(str(annotated_path)) if annotated_path.exists() else None
+        if original is None or annotated is None:
+            return None
+
+        if annotated.shape[:2] != original.shape[:2]:
+            annotated = cv2.resize(annotated, (original.shape[1], original.shape[0]), interpolation=cv2.INTER_LINEAR)
+
+        composite = cv2.hconcat([original, annotated])
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        cv2.imwrite(str(output_path), composite, [int(cv2.IMWRITE_JPEG_QUALITY), 85])
+        return output_path
+    except Exception:
+        return None
+
 FILE_CATEGORY_MAP = {
     "drones-inputs": DRONE_UPLOAD_DIR,
     "drones-reports": DRONE_OUTPUT_DIR,
@@ -166,6 +189,7 @@ FILE_CATEGORY_MAP = {
     "human-logs": HUMAN_LOG_DIR,
     "suspicious-inputs": SUSPICIOUS_UPLOAD_DIR,
     "suspicious-videos": SUSPICIOUS_OUTPUT_DIR,
+    "suspicious-logs": SUSPICIOUS_LOG_DIR,
     "surveillance-anomaly-inputs": SURV_ANOMALY_UPLOAD_DIR,
     "surveillance-anomaly-outputs": SURV_ANOMALY_OUTPUT_DIR,
     "surveillance-anomaly-logs": SURV_ANOMALY_LOG_DIR,
@@ -249,23 +273,72 @@ async def predict_intrusion(file: UploadFile = File(...)):
 async def detect_drones(file: UploadFile = File(...)):
     """Upload an image and run drone detection."""
 
-    content_type = file.content_type or ""
-    if not content_type.startswith("image/"):
+    if not _is_image(file.filename or "", file.content_type):
         raise HTTPException(status_code=400, detail="Only image files are allowed for drone detection.")
 
     try:
         data = await file.read()
         detector = _get_drone_detector()
         image_path = _store_upload(data, DRONE_UPLOAD_DIR, file.filename, ".jpg")
-        detections = detector(str(image_path))
+        annotated_path = DRONE_OUTPUT_DIR / f"{image_path.stem}_annotated.jpg"
+        comparison_path = DRONE_OUTPUT_DIR / f"{image_path.stem}_comparison.jpg"
+
+        detection_result = await run_in_threadpool(detector, str(image_path), str(annotated_path))
+        if isinstance(detection_result, dict):
+            detections = detection_result.get("detections", [])
+            summary = detection_result.get("summary")
+            annotated_written = detection_result.get("annotated_path")
+        else:
+            detections = detection_result
+            summary = None
+            annotated_written = None
+
+        if annotated_written:
+            try:
+                annotated_candidate = Path(annotated_written)
+                if annotated_candidate.exists():
+                    annotated_path = annotated_candidate
+            except Exception:  # pragma: no cover - defensive path parsing
+                pass
+
+        summary_payload: dict[str, Any] = summary if isinstance(summary, dict) else {
+            "detections_count": len(detections),
+            "alert_events": len(detections),
+            "drones_detected": len(detections),
+        }
+
+        report_payload = {
+            "filename": image_path.name,
+            "generated_at": datetime.utcnow().isoformat(),
+            "detections": detections,
+            "summary": summary_payload,
+        }
+
         report_path = DRONE_OUTPUT_DIR / f"{image_path.stem}_detections.json"
-        report_path.write_text(json.dumps(detections, indent=2, ensure_ascii=False))
+        _write_json(report_path, report_payload)
+
+        side_by_side = _create_side_by_side_image(image_path, annotated_path, comparison_path) if annotated_path.exists() else None
+
+        label_set: list[str] = []
+        for item in detections:
+            if not isinstance(item, dict):
+                continue
+            label_value = item.get("label")
+            if not isinstance(label_value, str):
+                continue
+            label_set.append(label_value)
+        label_set = sorted(set(label_set))
+
         return {
             "status": "success",
             "filename": file.filename,
+            "summary": summary_payload,
             "detections_count": len(detections),
             "detections": detections,
+            "labels": label_set,
             "image_url": f"/border/files/drones-inputs/{image_path.name}",
+            "output_url": f"/border/files/drones-reports/{annotated_path.name}" if annotated_path.exists() else None,
+            "comparison_url": f"/border/files/drones-reports/{comparison_path.name}" if side_by_side else None,
             "report_url": f"/border/files/drones-reports/{report_path.name}",
         }
     except ValueError as exc:
@@ -320,7 +393,26 @@ async def detect_suspicious_activity(file: UploadFile = File(...)):
         data = await file.read()
         detector = _get_suspicious_detector()
         input_video = _store_upload(data, SUSPICIOUS_UPLOAD_DIR, file.filename, ".mp4")
-        output_path = Path(detector(str(input_video)))
+        detection_result = await run_in_threadpool(detector, str(input_video))
+
+        if isinstance(detection_result, dict):
+            output_path = Path(detection_result.get("output_path", ""))
+            summary = detection_result.get("summary") or {}
+        else:
+            output_path = Path(detection_result)
+            summary = {}
+
+        summary_payload: dict[str, Any] = {
+            "frames_processed": int(summary.get("frames_processed", 0) or 0),
+            "frames_with_events": int(summary.get("frames_with_events", 0) or 0),
+            "detections_total": int(summary.get("detections_total", 0) or 0),
+            "alert_events": int(summary.get("frames_with_events", 0) or 0),
+            "suspicious_percentage": float(summary.get("suspicious_percentage", 0.0) or 0.0),
+            "labels_detected": list(summary.get("labels_detected", [])) if summary.get("labels_detected") else [],
+        }
+
+        log_path = SUSPICIOUS_LOG_DIR / f"{input_video.stem}_summary.json"
+        _write_json(log_path, summary_payload)
         stats = {
             "input_video_url": f"/border/files/suspicious-inputs/{input_video.name}",
             "output_size_bytes": output_path.stat().st_size if output_path.exists() else None,
@@ -328,8 +420,12 @@ async def detect_suspicious_activity(file: UploadFile = File(...)):
         return {
             "status": "success",
             "filename": file.filename,
+            "summary": summary_payload,
+            "labels": summary_payload.get("labels_detected", []),
             "stats": stats,
+            "output_url": f"/border/files/suspicious-videos/{output_path.name}",
             "video_url": f"/border/files/suspicious-videos/{output_path.name}",
+            "log_url": f"/border/files/suspicious-logs/{log_path.name}",
         }
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc

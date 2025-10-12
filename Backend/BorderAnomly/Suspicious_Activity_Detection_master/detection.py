@@ -17,6 +17,12 @@ class ShopliftingDetectionBackend:
         self.video_path = Path(video_path)
         self.output_path = Path(output_path)
 
+    self.total_frames = 0
+    self.flagged_frames = 0
+    self.total_detections = 0
+    self.labels: set[str] = set()
+    self.summary: dict[str, float | int | list[str]] = {}
+
         # Run the full pipeline
         self.load_model()
         self.open_video()
@@ -52,14 +58,36 @@ class ShopliftingDetectionBackend:
             if not ret:
                 break
 
+            self.total_frames += 1
             # run YOLO detection
             results = self.model(frame)
             annotated_frame = results[0].plot()
+
+            detections = results[0].boxes
+            detections_count = len(detections) if detections is not None else 0
+            if detections_count:
+                self.flagged_frames += 1
+                self.total_detections += detections_count
+                for box in detections:
+                    cls_id = int(box.cls[0].item()) if hasattr(box.cls[0], "item") else int(box.cls[0])
+                    label = self.model.names[int(cls_id)] if isinstance(self.model.names, (list, tuple)) else self.model.names.get(int(cls_id), str(cls_id))
+                    self.labels.add(str(label))
 
             # save annotated frame
             self.out.write(annotated_frame)
 
         print("[INFO] Detection finished.")
+        suspicious_percentage = (
+            round((self.flagged_frames / self.total_frames) * 100, 2)
+            if self.total_frames else 0.0
+        )
+        self.summary = {
+            "frames_processed": self.total_frames,
+            "frames_with_events": self.flagged_frames,
+            "detections_total": self.total_detections,
+            "suspicious_percentage": suspicious_percentage,
+            "labels_detected": sorted(self.labels),
+        }
 
     def cleanup(self):
         print("[INFO] Releasing resources...")
@@ -80,13 +108,16 @@ def detect_shoplifting(video_path: str | os.PathLike,
 
     output_path = output_dir / f"{video_path.stem}_output.mp4"
 
-    ShopliftingDetectionBackend(
+    backend = ShopliftingDetectionBackend(
         model_path=model_path,
         video_path=video_path,
         output_path=output_path,
     )
-
-    return str(output_path)
+    summary = backend.summary or {}
+    return {
+        "output_path": str(output_path),
+        "summary": summary,
+    }
 
 
 if __name__ == "__main__":
