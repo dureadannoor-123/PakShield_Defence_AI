@@ -1,3 +1,122 @@
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=200&section=header&text=PakShield%20Defence%20AI&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=38&color=0A2472&v=12"
+    width="100%"
+    alt="PakShield Defence AI"
+  />
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0A2472" width="100%" alt="blue line"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/YOLOv8-Model-blue?logo=python&logoColor=white" alt="YOLOv8"/>
+  <img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-0A2472?logo=opencv&logoColor=white" alt="OpenCV"/>
+  <img src="https://img.shields.io/badge/AI%20Defense-Security%20Intelligence-0A2472" alt="AI Defense"/>
+  <img src="https://img.shields.io/badge/Python-Backend-yellow?logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Vercel-Deployment-black?logo=vercel" alt="Vercel"/>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0A2472" width="100%" alt="blue line"/>
+</p>
+
+## 🧠 Project Overview
+
+**PakShield Defence AI** is an **AI-powered autonomous defense system** designed to enhance national security through real-time **threat detection and situational awareness**.  
+It integrates **drone, weapon, and human detection modules** using advanced computer vision and AI analytics, ensuring **rapid identification of potential threats** at borders and restricted zones.  
+
+🚀 Developed with precision by a skilled team:
+- **Afnan Shoukat** – Lead Vision & Integration  
+- **Usama Shahid** – Backend & AI Architecture  
+- **Dure Addan Noor** – UI & Data Coordination  
+
+🌐 **Live Demo:** [pakshieldai.vercel.app](https://pakshieldai.vercel.app)  
+🔗 **LinkedIn:** [Afnan Shoukat](https://linkedin.com/in/afnanshoukat) · [Usama Shahid](https://linkedin.com/in/-usamashahid) · [Dure Addan Noor](https://linkedin.com/in/adannoor)
+
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0A2472" width="100%" alt="blue line"/>
+</p>
+
+## ✨ Key Features
+
+
+### 🧩 1. AI Threat Intelligence  
+> **Smart security at the data layer**
+
+- 📧 **Email Phishing Detection** — Identifies malicious emails and phishing attempts using NLP-based classification.  
+- 🛡️ **Network Intrusion Detection** — Monitors network packets and detects abnormal activity patterns using trained ML models.  
+- ⚙️ Real-time inference with **FastAPI backend** and **automated alert system** for instant action.  
+
+### 🎥 2. Autonomous Video Surveillance  
+> **Eyes that never blink**
+
+- 🔫 **Weapon Detection** — Detects firearms, knives, or other weapons using custom-trained YOLOv8 models.  
+- 🧍 **Face Recognition** — Identifies authorized vs. unauthorized individuals with embedding-based recognition.  
+- 🚨 **Suspicious Activity Detection** — Flags abnormal behavior using motion trajectory and object analysis.  
+- 🤖 **Anomaly Detection** — AI-driven pattern recognition for detecting irregular or unexpected visual events.  
+- 🧩 Modular FastAPI endpoints for each vision model — optimized for real-time edge deployment.  
+
+
+
+### 🌍 3. Border Anomaly Detection  
+> **Defending the unseen borders**
+
+- 🚁 **Drone Detection** — Uses aerial object recognition model (`best.pt`) for identifying drones in real-time.  
+- 🌙 **Thermal Human Detection** — Detects human presence in night vision or thermal camera feeds.  
+- 🕵️ **Suspicious Movement Tracking** — Tracks movement patterns to differentiate humans, animals, or machines.  
+- 🗄️ Lightweight model integration supporting YOLOv11 transfer learning and custom datasets.  
+
+
+
+### ⚙️ Additional Highlights  
+- 🧠 Hybrid mix of **scratch-trained & transfer-learned YOLO models**  
+- 🔗 Integrated **React + Next.js frontend** with a modern, responsive dashboard  
+- 📡 FastAPI-based backend with modular endpoints  
+- 🧾 Organized folder structure for **AI modules, API, config, and assets**  
+- 💾 Google Drive model syncing script for large files (auto-download ready)  
+- 🔐 Secured access pipeline for deployment & model versioning  
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0A2472" width="100%" alt="blue line"/>
+</p>
+
+## 🏗️ Architecture / System Design
+
+
+**PakShield AI** follows a **modular multi-agent architecture** that integrates real-time defense analytics, video surveillance intelligence, and cyber threat detection under one unified framework.
+
+### 🧩 System Overview
+
+```mermaid
+flowchart TD
+    A[Data Sources] -->|Video Streams / Network Logs / Alerts| B[Data Preprocessing]
+    B --> C[AI Models Layer]
+    C --> C1[Weapon Detection (YOLOv8)]
+    C --> C2[Drone Detection (YOLOv11)]
+    C --> C3[Suspicious Activity Detection]
+    C --> C4[Cyber Threat Classifier (Logistic Regression)]
+    C --> D[Decision Engine]
+    D --> E[Alert & Response Module]
+    E --> F[Dashboard / Vercel Frontend]
+    F --> G[Security Teams & Defense Analysts]
+```
+
+### ⚙️ Components Breakdown
+
+* **Data Sources** – Real-time feeds from surveillance cameras, drones, and network activity logs.
+* **Preprocessing Engine** – Cleans, formats, and synchronizes data for model input.
+* **AI Models Layer** – Deep learning modules for detection and classification.
+* **Decision Engine** – Integrates multi-model outputs to evaluate threat levels.
+* **Alert & Response Module** – Sends notifications and generates reports.
+* **Dashboard (Vercel)** – Frontend for real-time visualization and management.
+
+
+
+
+
 <div align="center">
 
 # 🛡️ **PAKSHIELD AI**
