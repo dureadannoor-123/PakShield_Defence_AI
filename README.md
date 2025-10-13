@@ -1,25 +1,25 @@
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=200&section=header&text=PakShield%20Defence%20AI&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=38&color=0A2472&v=12"
+    src="https://capsule-render.vercel.app/api?type=waving&height=200&section=header&text=PakShield%20Defence%20AI&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=38&color=67cc54&v=12"
     width="100%"
     alt="PakShield Defence AI"
   />
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0A2472" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/YOLOv8-Model-blue?logo=python&logoColor=white" alt="YOLOv8"/>
   <img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-0A2472?logo=opencv&logoColor=white" alt="OpenCV"/>
-  <img src="https://img.shields.io/badge/AI%20Defense-Security%20Intelligence-0A2472" alt="AI Defense"/>
+  <img src="https://img.shields.io/badge/AI%20Defense-Security%20Intelligence-67cc54" alt="AI Defense"/>
   <img src="https://img.shields.io/badge/Python-Backend-yellow?logo=python&logoColor=white" alt="Python"/>
   <img src="https://img.shields.io/badge/Vercel-Deployment-black?logo=vercel" alt="Vercel"/>
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0A2472" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
 </p>
 
 ## 🧠 Project Overview
@@ -37,7 +37,7 @@ It integrates **drone, weapon, and human detection modules** using advanced comp
 
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0A2472" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
 </p>
 
 ## ✨ Key Features
@@ -69,22 +69,11 @@ It integrates **drone, weapon, and human detection modules** using advanced comp
 - 🕵️ **Suspicious Movement Tracking** — Tracks movement patterns to differentiate humans, animals, or machines.  
 - 🗄️ Lightweight model integration supporting YOLOv11 transfer learning and custom datasets.  
 
-
-
-### ⚙️ Additional Highlights  
-- 🧠 Hybrid mix of **scratch-trained & transfer-learned YOLO models**  
-- 🔗 Integrated **React + Next.js frontend** with a modern, responsive dashboard  
-- 📡 FastAPI-based backend with modular endpoints  
-- 🧾 Organized folder structure for **AI modules, API, config, and assets**  
-- 💾 Google Drive model syncing script for large files (auto-download ready)  
-- 🔐 Secured access pipeline for deployment & model versioning  
-
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0A2472" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
 </p>
 
 ## 🏗️ Architecture / System Design
-
 
 **PakShield AI** follows a **modular multi-agent architecture** that integrates real-time defense analytics, video surveillance intelligence, and cyber threat detection under one unified framework.
 
@@ -92,16 +81,19 @@ It integrates **drone, weapon, and human detection modules** using advanced comp
 
 ```mermaid
 flowchart TD
-    A[Data Sources] -->|Video Streams / Network Logs / Alerts| B[Data Preprocessing]
-    B --> C[AI Models Layer]
-    C --> C1[Weapon Detection (YOLOv8)]
-    C --> C2[Drone Detection (YOLOv11)]
-    C --> C3[Suspicious Activity Detection]
-    C --> C4[Cyber Threat Classifier (Logistic Regression)]
-    C --> D[Decision Engine]
-    D --> E[Alert & Response Module]
-    E --> F[Dashboard / Vercel Frontend]
-    F --> G[Security Teams & Defense Analysts]
+    A["📡 Data Sources"] -->|"Video Streams / Network Logs / Alerts"| B["🧹 Data Preprocessing"]
+    B --> C["🧠 AI Models Layer"]
+    C --> D1["🔫 Weapon Detection (YOLOv8)"]
+    C --> D2["🛸 Drone Detection (YOLOv11)"]
+    C --> D3["🕵️ Suspicious Activity Detection"]
+    C --> D4["💻 Cyber Threat Classifier (Logistic Regression)"]
+    D1 --> E["⚙️ Decision Engine"]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+    E --> F["🚨 Alert & Response Module"]
+    F --> G["📊 Dashboard (Vercel Frontend)"]
+    G --> H["🧍 Security Teams & Defence Analysts"]
 ```
 
 ### ⚙️ Components Breakdown
@@ -113,303 +105,153 @@ flowchart TD
 * **Alert & Response Module** – Sends notifications and generates reports.
 * **Dashboard (Vercel)** – Frontend for real-time visualization and management.
 
-
-
-
-
-<div align="center">
-
-# 🛡️ **PAKSHIELD AI**
-
-### *Defend Smarter, Act Faster, Secure Always.*
-
-[![Last Commit](https://img.shields.io/github/last-commit/fewgets/PakShieldAI?color=blue)]()
-![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-success?logo=fastapi)
-![Next.js](https://img.shields.io/badge/Frontend-Next.js-black?logo=next.js)
-![React](https://img.shields.io/badge/React-18.2-blue?logo=react)
-![YOLOv8](https://img.shields.io/badge/YOLOv8-Detection-orange?logo=yolo)
-![AI](https://img.shields.io/badge/Artificial_Intelligence-Enabled-blueviolet)
-
 <p align="center">
-  <img src="https://img.shields.io/badge/Numpy-0175C2?logo=numpy&logoColor=white"/>
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white"/>
-  <img src="https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/Next.js-black?logo=next.js"/>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/YoloV8/YoloV11-orange"/>
-  <img src="https://img.shields.io/badge/Pydantic-efefef?logo=pydantic&logoColor=blue"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
 </p>
 
-</div>
+## ⚙️ Tech Stack
 
----
+PakShield AI is engineered using a **hybrid tech ecosystem** that unifies real-time video intelligence, cyber threat analytics, and multi-agent AI coordination. Each layer of the stack is optimized for performance, scalability, and modular integration.
 
-## 🚀 **Live Demo**
-🔗 **Frontend (Deployed on Vercel):**  
-👉 [https://pakshieldai.vercel.app](https://pakshieldai.vercel.app)
+### 🧠 **Artificial Intelligence & Machine Learning Stack**
 
-> 🧠 *Experience real-time AI-driven defence — from border surveillance to cyber threat detection.*
+Here’s your updated table including **Face Recognition** and **Anomaly Detection** modules 👇
 
----
+| Module                                | Model / Technique                  | Description                                                  |
+| ------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
+| 🔫 **Weapon Detection**               | YOLOv8                             | Real-time firearm & object detection from surveillance feeds |
+| 🛸 **Drone Detection**                | YOLOv11                            | Detects low-flying UAVs from border and restricted zones     |
+| 🧍 **Thermal Human Detection**        | CNN (Custom)                       | Identifies human silhouettes in thermal imagery at night     |
+| 🕵️ **Suspicious Activity Detection** | Custom Anomaly Classifier          | Flags irregular human or vehicle behaviors                   |
+| 🧑‍💻 **Cyber Threat Analysis (IDS)** | Logistic Regression, Decision Tree | Classifies phishing attempts and intrusion patterns          |
+| 📧 **Email Phishing Classifier**      | NLP + TF-IDF                       | Filters fraudulent emails and phishing attempts              |
+| 🧠 **Face Recognition**               | FaceNet / OpenCV                   | Identifies and verifies individuals from surveillance video  |
+| ⚠️ **Anomaly Detection**              | Autoencoder + Statistical Models   | Detects unusual patterns across multi-sensor border data     |
 
-## 🖼️ **Project Snapshots**
 
-| Dashboard | Intrusion Detection | Face Recognition |
-|------------|--------------------|------------------|
-| ![Dashboard](Images/dashboard.png) | ![Intrusion](Images/intrusion_detection.png) | ![Face](Images/face_recognition.png) |
-
-| Drone Detection | Weapon Detection | Email Phishing / Anomaly Detection |
-|------------------|------------------|-----------------------------------|
-| ![Drone](Images/drone_detection.png) | ![Weapon](Images/weapon_detection.png) | ![Anomaly](Images/anomaly_detection.png) |
-
----
-
-## 🧩 **System Architecture Visualization**
-
-```mermaid
-flowchart TD
-    A[Data Input] --> B[AI Threat Intelligence]
-    A --> C[Video Surveillance]
-    A --> D[Border Anomaly Detection]
-
-    B --> B1[Email Phishing Detection]
-    B --> B2[Network Intrusion Detection]
-
-    C --> C1[Weapon Detection]
-    C --> C2[Face Recognition]
-    C --> C3[Anomaly Detection]
-    C --> C4[Suspicious Activity Detection]
-
-    D --> D1[Drone Detection]
-    D --> D2[Thermal Human Detection]
-    D --> D3[Border Suspicious Activity Detection]
-
-    E[FastAPI Backend] --> F[Next.js Frontend]
-    F --> G[User Dashboard + Alerts]
-
----
-
-## 🚀 Project Overview
-
-### 🔰 Core Pillars
-
-1. **AI Threat Intelligence**
-
-   * Email Phishing Detection
-   * Network Intrusion Detection
-
-2. **Autonomous Video Surveillance**
-
-   * Weapon Detection
-   * Face Recognition
-   * Anomaly Detection
-   * Suspicious Activity Detection
-
-3. **Border Anomaly Detection**
-
-   * Drone Detection
-   * Thermal Human Detection (Night Vision)
-   * Suspicious Activity Detection
-
-Each category operates under a unified defense pipeline that uses Python-based backend intelligence (FastAPI) and React + Next.js (TypeScript) frontend for real-time interaction and control.
-
----
-
-## 🧠 Technology Stack
-
-| Layer               | Technology                             | Description                                        |
-| ------------------- | -------------------------------------- | -------------------------------------------------- |
-| **Backend**         | Python, FastAPI                        | RESTful API handling AI inference and data flow    |
-| **Frontend**        | React, Next.js (TypeScript)            | Modern, responsive web interface for visualization |
-| **AI Frameworks**   | PyTorch, YOLOv8, YOLOv11, Scikit-learn | Core ML models for detection & classification      |
-| **Database**        | PostgreSQL / Supabase                  | For storing logs, results, and user analytics      |
-| **Cloud / Storage** | Google Drive                           | For hosting large model files like `best.pt`       |
-
----
-
-## 📂 Folder Structure
+### 🧬 **Integration Summary**
 
 ```
-PakShieldAI/
-│
-├── Backend/
-│   ├── AIThreatIntelligence/
-│   │   ├── phishing_detection/
-│   │   ├── intrusion_network_detection/
-│   │
-│   ├── BorderAnomly/
-│   │   ├── drones/
-│   │   │   └── best.pt  # Large model file (Download from Google Drive)
-│   │   ├── thermal_detection/
-│   │   └── suspicious_activity/
-│   │
-│   ├── Survillence/
-│   │   ├── weapon_detection/
-│   │   ├── face_recognition/
-│   │   ├── anomaly_detection/
-│   │   └── suspicious_activity/
-│   │
-│   ├── api.py
-│   └── requirements.txt
-│
-├── Frontend/
-│   ├── app/
-│   ├── components/
-│   ├── config/
-│   │   └── config.js  # Backend API endpoints
-│   ├── pages/
-│   └── package.json
-│
-└── README.md
+[Python AI Modules] → [FastAPI Backend APIs] → [Next.js Frontend] → [Vercel Dashboard] → [Defense Operations Unit]
 ```
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+</p>
 
+## 🚀 Installation & Setup
+
+### 🔧 Prerequisites
+
+* Python 3.10+
+* Node.js 18+
+* Git
+* Virtual Environment (optional but recommended)
 ---
 
-## 🌐 Live Demo
-
-**Frontend URL:** [https://pakshieldai.vercel.app](https://pakshieldai.vercel.app)
-*(Live preview may take a few seconds to load as APIs initialize.)*
-
----
-
-## 💻 How to Clone & Run Locally
-
-### 1️⃣ Clone Repository
+### ⚙️ Backend Setup (Flask + ML Models)
 
 ```bash
+# Clone the repository
 git clone https://github.com/fewgets/PakShieldAI.git
-cd PakShieldAI
-```
+cd PakShieldAI/Backend
 
-### 2️⃣ Setup Backend (Python + FastAPI)
-
-```bash
-cd Backend
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+source venv/Scripts/activate     # On Windows
+# or
+source venv/bin/activate         # On Mac/Linux
+
+# Install dependencies
 pip install -r requirements.txt
-uvicorn api:app --reload
+
+# Run backend API
+python api.py
 ```
 
-### 3️⃣ Setup Frontend (Next.js + TypeScript)
+---
+
+### 💻 Frontend Setup (Next.js)
 
 ```bash
 cd ../Frontend
+
+# Install dependencies
 npm install
+
+# Configure backend API in:
+public/config/config.js
+
+# Run the frontend
 npm run dev
 ```
 
-Access frontend at [http://localhost:3000](http://localhost:3000)
-
 ---
 
-## 🔬 Module Functionality Breakdown
+### 🌍 Access the App
 
-### 🧩 AI Threat Intelligence
+Once both servers are running:
 
-#### 1. **Email Phishing Detection**
+* **Frontend:** [http://localhost:3000](http://localhost:3000)
+* **Backend API:** [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
-* Model: Custom CNN + TF-IDF + Logistic Regression
-* Dataset: Kaggle Phishing Email Dataset
-* Functionality: Detects phishing attempts from subject, content, and sender patterns.
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+</p>
 
-#### 2. **Network Intrusion Detection**
+## 🧩 Usage Guide
 
-* Model: Decision Tree + Deep Neural Network Hybrid
-* Dataset: KDDCup99
-* Detects abnormal traffic patterns and prevents unauthorized access attempts.
+### 🧠 How to Use
 
----
+#### **1️⃣ Launch the System**
 
-### 🎥 Autonomous Video Surveillance
+* Start the backend API (`api.py`)
+* Run the frontend via Next.js (`npm run dev`)
+* Access the web interface at: `http://localhost:3000`
 
-#### 1. **Weapon Detection**
+#### **2️⃣ Upload / Stream Inputs**
 
-* Model: YOLOv8 (transfer learning)
-* Detects firearms and melee weapons in real-time CCTV streams.
+* 🧍 Upload **thermal or surveillance video** to detect humans at night.
+* 🛸 Stream **drone or aerial footage** for UAV detection.
+* 🔫 Submit **weapon footage** for automatic firearm identification.
+* 📧 Provide **email samples or logs** for phishing classification.
 
-#### 2. **Face Recognition**
+### 🖼️ Screenshots
 
-* Model: FaceNet (pretrained)
-* Used for suspect identification and personnel verification.
+| Module                            |                                              Preview                                              |
+| :-------------------------------- | :-----------------------------------------------------------------------------------------------: |
+| **Weapon Detection (YOLOv8)**     |     ![Weapon Detection](https://github.com/fewgets/PakShieldAI/assets/weapon_detect_demo.gif)     |
+| **Drone Detection (YOLOv11)**     |      ![Drone Detection](https://github.com/fewgets/PakShieldAI/assets/drone_detect_demo.gif)      |
+| **Thermal Human Detection (CNN)** | ![Thermal Human Detection](https://github.com/fewgets/PakShieldAI/assets/thermal_detect_demo.gif) |
+| **Face Recognition**              |    ![Face Recongtion](https://github.com/fewgets/PakShieldAI/assets/cyber_ids_demo.png)   |
+| **Dashboard Interface (Next.js)** |            ![Dashboard](https://github.com/fewgets/PakShieldAI/assets/dashboard_ui.png)           |
 
-#### 3. **Anomaly Detection**
 
-* Model: Autoencoder-based motion anomaly detector.
-* Identifies irregular human or object movements in restricted zones.
 
-#### 4. **Suspicious Activity Detection**
 
-* Uses YOLOv11 for behavior-based analysis (e.g., theft, trespassing).
 
----
 
-### 🌍 Border Anomaly Detection
 
-#### 1. **Drone Detection**
 
-* Model: YOLOv8 (Custom-trained)
-* Location: `Backend/BorderAnomly/drones/best.pt`
-* Detects UAVs, drones, and flying objects in border surveillance feeds.
 
-#### 2. **Thermal Human Detection (Night Vision)**
 
-* Model: YOLOv8 trained on thermal datasets.
-* Identifies human movement during nighttime or low visibility.
 
-#### 3. **Suspicious Border Activity**
 
-* Combines anomaly and motion detection on border footage.
-* Detects illegal crossings, group formations, or dropped objects.
 
----
 
-## ⚙️ Functional Flow of Each Pipeline
 
-### 🔐 AI Threat Intelligence
 
-1. User uploads email logs or network data.
-2. FastAPI backend processes data → AI model inference.
-3. Response sent to frontend dashboard → visual report.
 
-### 🎦 Video Surveillance
 
-1. Real-time or uploaded video → processed by YOLO models.
-2. Bounding boxes drawn on detections (weapons, humans, activities).
-3. Alerts generated on suspicious activity → stored in database.
 
-### 🌐 Border Anomaly Detection
 
-1. Drone footage or thermal camera input → processed by detection models.
-2. Night vision detection identifies humans under low light.
-3. Suspicious activity triggers alert and notifies central interface.
 
----
 
-## ✨ Features
 
-* Real-time video surveillance
-* Multi-model AI threat analysis
-* Night vision support (thermal mode)
-* FastAPI REST endpoints for modular control
-* Responsive React + Next.js dashboard
-* Multi-threaded inference engine for faster predictions
-* Cloud-based model management for large file handling
 
----
 
-## 📈 Future Enhancements
 
-* Add **cyber warfare intelligence** with zero-day exploit prediction
-* Integrate **speech recognition** for command-based alerts
-* Enhance border detection with **multi-sensor fusion (radar + vision)**
-* Build a **mobile command app** for field operatives
-* Include **LSTM predictive analytics** for proactive threat forecasting
 
----
+
 
 ## 👥 Contributors
 
