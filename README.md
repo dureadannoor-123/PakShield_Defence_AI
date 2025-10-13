@@ -192,7 +192,7 @@ npm run dev
 Once both servers are running:
 
 * **Frontend:** [http://localhost:3000](http://localhost:3000)
-* **Backend API:** [http://127.0.0.1:5000](http://127.0.0.1:8000)
+* **Backend API:** [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
