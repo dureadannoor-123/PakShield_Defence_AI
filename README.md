@@ -1,25 +1,25 @@
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=200&section=header&text=PakShield%20Defence%20AI&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=38&color=67cc54&v=12"
+    src="https://capsule-render.vercel.app/api?type=waving&height=200&section=header&text=PakShield%20Defence%20AI&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=38&color=16afe6&v=12"
     width="100%"
     alt="PakShield Defence AI"
   />
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="blue line"/>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/YOLOv8-Model-blue?logo=python&logoColor=white" alt="YOLOv8"/>
   <img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-0A2472?logo=opencv&logoColor=white" alt="OpenCV"/>
-  <img src="https://img.shields.io/badge/AI%20Defense-Security%20Intelligence-67cc54" alt="AI Defense"/>
+  <img src="https://img.shields.io/badge/AI%20Defense-Security%20Intelligence-16afe6" alt="AI Defense"/>
   <img src="https://img.shields.io/badge/Python-Backend-yellow?logo=python&logoColor=white" alt="Python"/>
   <img src="https://img.shields.io/badge/Vercel-Deployment-black?logo=vercel" alt="Vercel"/>
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="blue line"/>
 </p>
 
 ## 🧠 Project Overview
@@ -37,7 +37,7 @@ It integrates **drone, weapon, and human detection modules** using advanced comp
 
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="blue line"/>
 </p>
 
 ## ✨ Key Features
@@ -70,7 +70,7 @@ It integrates **drone, weapon, and human detection modules** using advanced comp
 - 🗄️ Lightweight model integration supporting YOLOv11 transfer learning and custom datasets.  
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="blue line"/>
 </p>
 
 ## 🏗️ Architecture / System Design
@@ -106,7 +106,7 @@ flowchart TD
 * **Dashboard (Vercel)** – Frontend for real-time visualization and management.
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="blue line"/>
 </p>
 
 ## ⚙️ Tech Stack
@@ -135,7 +135,7 @@ Here’s your updated table including **Face Recognition** and **Anomaly Detecti
 [Python AI Modules] → [FastAPI Backend APIs] → [Next.js Frontend] → [Vercel Dashboard] → [Defense Operations Unit]
 ```
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="blue line"/>
 </p>
 
 ## 🚀 Installation & Setup
@@ -195,7 +195,7 @@ Once both servers are running:
 * **Backend API:** [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="blue line"/>
 </p>
 
 ## 🧩 Usage Guide
@@ -236,7 +236,7 @@ Once both servers are running:
 
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="blue line"/>
 </p>
 
 
@@ -302,7 +302,7 @@ Testing involved:
 ✅ Reliable precision under mixed surveillance conditions
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="blue line"/>
 </p>
 
 
@@ -340,7 +340,7 @@ PakShield AI aims to evolve into a **fully autonomous, cross-domain defense inte
 * Expand to **international security and smart-city monitoring use-cases**.
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="blue line"/>
 </p>
 
 
@@ -371,7 +371,7 @@ PakShield AI aims to evolve into a **fully autonomous, cross-domain defense inte
 > PakShield AI stands as a symbol of **Pakistan’s defense innovation**, blending AI, cybersecurity, and real-time intelligence for safer borders and smarter surveillance.
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="blue line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="blue line"/>
 </p>
 
 
@@ -407,18 +407,16 @@ We welcome:
 
 > 📢 *To request access to training scripts or datasets, contact us via email or LinkedIn with your project intent.*
 
----
-
 <!-- PINK DIVIDER -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=67cc54" width="100%" alt="pink line"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=16afe6" width="100%" alt="pink line"/>
 </p>
 
 <p align="center">🕊️ “Together, we build intelligent shields for a safer tomorrow.”</p>
 
 <!-- Floating Footer Wave -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=140&section=footer&color=67cc54" width="100%" alt="pink footer wave"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=140&section=footer&color=16afe6" width="100%" alt="pink footer wave"/>
 </p>
 
 
