@@ -220,11 +220,14 @@ Once both servers are running:
 | Module                            |                                              Preview                                              |
 | :-------------------------------- | :-----------------------------------------------------------------------------------------------: |
 | **Dashboard Interface (Next.js)** |            ![Dashboard](https://github.com/21Afnan/PakShieldAI/assets/dashboard.png)           |
+| **AI Threat Intelligence**     |     ![Weapon Detection](https://github.com/21Afnan/PakShieldAI/assets/threat.png)     |
+| **Video surveillance analytics**     |      ![Drone Detection](https://github.com/21Afnan/PakShieldAI/assets/sur.png)      |
+| **Border Anomly**            |      ![Border Anomly](https://github.com/21Afnan/PakShieldAI/assets/border.png)      |
+| **Thermal Human Detection (CNN)** | ![Thermal Human Detection](https://github.com/21Afnan/PakShieldAI/assets/thermal_detect.png) |
+| **Face Recognition**              |    ![Face Recongtion](https://github.com/21Afnan/PakShieldAI/assets/face.jpg)   |
+| **Network Intrusion Detection** | ![Network Intrusion Detection](https://github.com/21Afnan/PakShieldAI/assets/ids.png) |
 | **Weapon Detection (YOLOv8)**     |     ![Weapon Detection](https://github.com/21Afnan/PakShieldAI/assets/weapon_detect.png)     |
 | **Drone Detection (YOLOv11)**     |      ![Drone Detection](https://github.com/21Afnan/PakShieldAI/assets/drone_detect.png)      |
-| **Thermal Human Detection (CNN)** | ![Thermal Human Detection](https://github.com/21Afnan/PakShieldAI/assets/thermal_detect.png) |
-| **Face Recognition**              |    ![Face Recongtion](https://github.com/21Afnan/PakShieldAI/assets/face.png)   |
-| **Network Intrusion Detection** | ![Network Intrusion Detection](https://github.com/21Afnan/PakShieldAI/assets/ids.png) |
 
 
 
