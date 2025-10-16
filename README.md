@@ -33,7 +33,7 @@ It integrates **drone, weapon, and human detection modules** using advanced comp
 - **Dure Addan Noor** – UI & Data Coordination  
 
 🌐 **Live Demo:** [pakshieldai.vercel.app](https://pakshieldai.vercel.app)  
-🔗 **LinkedIn:** [Afnan Shoukat](https://linkedin.com/in/afnanshoukat) · [Usama Shahid](https://linkedin.com/in/-usamashahid) · [Dure Addan Noor](https://github.com/dureadannoor-123)
+🔗 **LinkedIn:** [Afnan Shoukat](https://linkedin.com/in/afnanshoukat) · [Usama Shahid](https://linkedin.com/in/-usamashahid) · [Dure Addan Noor](https://www.linkedin.com/in/dure-adan-noor-29b01b2b5)
 
 
 <p align="center">
@@ -217,18 +217,22 @@ Once both servers are running:
 
 ### 🖼️ Screenshots
 
-| Module                            |                                              Preview                                              |
-| :-------------------------------- | :-----------------------------------------------------------------------------------------------: |
-| **Dashboard Interface (Next.js)** |            ![Dashboard](https://github.com/21Afnan/PakShieldAI/assets/dashboard.png)           |
-| **AI Threat Intelligence**     |     ![Weapon Detection](https://github.com/21Afnan/PakShieldAI/assets/threat.png)     |
-| **Video surveillance analytics**     |      ![Drone Detection](https://github.com/21Afnan/PakShieldAI/assets/sur.png)      |
-| **Border Anomly**            |      ![Border Anomly](https://github.com/21Afnan/PakShieldAI/assets/border.png)      |
-| **Thermal Human Detection (CNN)** | ![Thermal Human Detection](https://github.com/21Afnan/PakShieldAI/assets/thermal_detect.png) |
-| **Face Recognition**              |    ![Face Recongtion](https://github.com/21Afnan/PakShieldAI/assets/face.jpg)   |
-| **Network Intrusion Detection** | ![Network Intrusion Detection](https://github.com/21Afnan/PakShieldAI/assets/ids.png) |
-| **Weapon Detection (YOLOv8)**     |     ![Weapon Detection](https://github.com/21Afnan/PakShieldAI/assets/weapon_detect.png)     |
-| **Drone Detection (YOLOv11)**     |      ![Drone Detection](https://github.com/21Afnan/PakShieldAI/assets/drone_detect.png)      |
 
+|                               **Dashboard Interface (Next.js)**                              |                               **AI Threat Intelligence**                               |
+| :------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+| ![Dashboard](https://github.com/21Afnan/PakShield_Defence_AI/blob/main/assets/dashboard.png) | ![Threat](https://github.com/21Afnan/PakShield_Defence_AI/blob/main/assets/threat.png) |
+
+|                              **Video Surveillance Analytics**                             |                              **Border Anomaly Detection**                              |
+| :---------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+| ![Surveillance](https://github.com/21Afnan/PakShield_Defence_AI/blob/main/assets/sur.png) | ![Border](https://github.com/21Afnan/PakShield_Defence_AI/blob/main/assets/border.png) |
+
+|                                **Face Recognition (Real-Time)**                                |                          **Network Intrusion Detection**                         |
+| :--------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------: |
+| ![Face Recognition](https://github.com/21Afnan/PakShield_Defence_AI/blob/main/assets/face.jpg) | ![IDS](https://github.com/21Afnan/PakShield_Defence_AI/blob/main/assets/ids.png) |
+
+|                                 **Weapon Detection (YOLOv8)**                                 |                                **Drone Detection (YOLOv11)**                                |
+| :-------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
+| ![Weapon](https://github.com/21Afnan/PakShield_Defence_AI/blob/main/assets/weapon_detect.png) | ![Drone](https://github.com/21Afnan/PakShield_Defence_AI/blob/main/assets/drone_detect.png) |
 
 
 <p align="center">
@@ -388,7 +392,7 @@ PakShield AI aims to evolve into a **fully autonomous, cross-domain defense inte
 | 🌍 **Live Demo**          | [pakshieldai.vercel.app](https://pakshieldai.vercel.app)                                                                                                           | Explore the web dashboard live                |
 | 📧 **Email (Lead)**       | [afnanshoukat011@gmail.com](mailto:afnanshoukat011@gmail.com)                                                                                                        | Contact Afnan Shoukat (Lead Vision)       |
 | 🧠 **GitHub**             | [github.com/21Afnan](https://github.com/21Afnan)                                                                                                                   | Access source code, updates, and models       |
-| 💼 **LinkedIn (Team)**    | [Afnan Shoukat](https://linkedin.com/in/afnanshoukat) · [Usama Shahid](https://linkedin.com/in/-usamashahid) · [Dure Addan Noor](https://linkedin.com/in/dureadannoor-123) | Follow project updates and contributions      |
+| 💼 **LinkedIn (Team)**    | [Afnan Shoukat](https://linkedin.com/in/afnanshoukat) · [Usama Shahid](https://linkedin.com/in/-usamashahid) · [Dure Addan Noor](https://www.linkedin.com/in/dure-adan-noor-29b01b2b5) | Follow project updates and contributions      |
 | 🧩 **Collaboration Form** | *Coming Soon*                                                                                                                                                      | For joint ventures and research opportunities |
 
 ---
