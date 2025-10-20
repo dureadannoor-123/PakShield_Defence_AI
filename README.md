@@ -27,10 +27,14 @@
 **PakShield Defence AI** is an **AI-powered autonomous defense system** designed to enhance national security through real-time **threat detection and situational awareness**.  
 It integrates **drone, weapon, and human detection modules** using advanced computer vision and AI analytics, ensuring **rapid identification of potential threats** at borders and restricted zones.  
 
-🚀 Developed with precision by a skilled team:
-- **Afnan Shoukat** – Lead Vision & Integration  
-- **Usama Shahid** – Backend & AI Architecture  
-- **Dure Addan Noor** – UI & Data Coordination  
+## Our TEAM 🚀
+
+Our team developed a 3-module intelligent security system — each member taking ownership of one critical component:
+🔹 Afnan Shoukat - Video surveillance analytics 
+🔹 Usama Shahid - Threat intelligence AI 
+🔹 Dure Addan Noor - Border Anomaly Detection  
+
+A project built with precision, innovation, and strong teamwork!  
 
 🌐 **Live Demo:** [pakshieldai.vercel.app](https://pakshieldai.vercel.app)  
 🔗 **LinkedIn:** [Afnan Shoukat](https://linkedin.com/in/afnanshoukat) · [Usama Shahid](https://linkedin.com/in/-usamashahid) · [Dure Addan Noor](https://www.linkedin.com/in/dure-adan-noor-29b01b2b5)
