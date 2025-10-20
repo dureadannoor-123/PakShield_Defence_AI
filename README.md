@@ -30,9 +30,10 @@ It integrates **drone, weapon, and human detection modules** using advanced comp
 ## Our TEAM 🚀
 
 Our team developed a 3-module intelligent security system — each member taking ownership of one critical component:
--🔹 Afnan Shoukat - Video surveillance analytics 
--🔹 Usama Shahid - Threat intelligence AI 
--🔹 Dure Addan Noor - Border Anomaly Detection  
+
+🔹 **Afnan Shoukat** – Video Surveillance Analytics  
+🔹 **Usama Shahid** – Threat Intelligence AI  
+🔹 **Dure Addan Noor** – Border Anomaly Detection
 
 A project built with precision, innovation, and strong teamwork!  
 
